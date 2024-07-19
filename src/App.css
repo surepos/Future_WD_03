@@ -195,6 +195,7 @@ body {
   }
   .App .topSection {
     height: 30%;
+    margin-top: -30px;
   }
   .App .topSection .circle {
     width: 120px;
