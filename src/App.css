@@ -190,6 +190,9 @@ body {
   height: 50%;
 }
 @media (max-width: 600px) {
+  .App {
+    gap: 5%;
+  }
   .App .topSection {
     height: 30%;
   }
