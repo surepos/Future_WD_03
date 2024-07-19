@@ -1,38 +1,232 @@
+body {
+  background: linear-gradient(to right, #000000, #242323);
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  padding: 5vh 10vw;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-around;
+  gap: 15%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .topSection {
+  width: 100%;
+  height: 45%;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: solid 0.5px rgba(255, 255, 255, 0.2);
+  transition: 0.2s ease-in-out;
+}
+.App .topSection:hover {
+  transform: scale(1.03);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .topSection .circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .topSection .circle::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background-color: #222;
+  opacity: 0.8;
+}
+
+.App .topSection .circle::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #333;
+  border: 15px solid #4d4c51;
+  border-radius: 50%;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.75), 0 -2px 2px rgba(255, 255, 255, 0.5),
+    inset 0 4px 2px rgba(0, 0, 0, 0.25),
+    inset 0 -2px 2px rgba(255, 255, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.App .topSection .circle img {
+  position: absolute;
+  z-index: 10;
+  width: 50%;
+  transform: rotate(45deg);
+}
+.App .topSection .inputInfo {
+  background-color: rgba(7, 7, 7, 0.5);
+  height: 75%;
+  width: 17%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+.App .topSection .inputInfo div {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.App .topSection .inputInfo input {
+  width: 80%;
+}
+.App .topSection .inputInfo select {
+  background-color: transparent;
+  font-size: 2rem;
+  color: #eeeeee;
+  border: none;
+  font-family: 'Anek Kannada', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.App .topSection .inputInfo .numberInput input {
+  background-color: transparent;
+  border: none;
+  font-size: 3.5rem;
+  color: #eeeeee;
+  border: none;
+  font-family: 'Anek Kannada', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Center the input value horizontally */
+  width: 100%; /* Ensure the input takes the full width of its container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.App .topSection .inputInfo .degreeSymbol {
+  display: flex;
+  justify-content: flex-end;
+}
+.App .topSection .inputInfo img {
+  width: 25%;
+}
+.App .bottomSection {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  font-family: 'Lexend', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.App .bottomSection .degreeInput {
+  color: rgba(0, 192, 255, 1);
+}
+.App .bottomSection .cardContainer {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 85%;
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  border: solid 0.6px rgba(255, 255, 255, 0.2);
+  transition: 0.2s ease-in-out;
+}
+.App .bottomSection .cardContainer:hover {
+  transform: scale(1.04);
+}
+.App .bottomSection .cardContainer img {
+  width: 25%;
+}
+.App .bottomSection .cardContainer .degreeSymbol {
+  display: flex;
+  justify-content: flex-end;
+}
+.App .bottomSection .cardContainer .numberInput {
+  font-size: 3rem;
+}
+.App .bottomSection .cardContainer .degreeInput {
+  font-size: 2rem;
+}
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  transition: opacity 1s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.svg-wrapper {
+  width: 50%;
+  height: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .App .topSection {
+    height: 30%;
   }
-  to {
-    transform: rotate(360deg);
+  .App .topSection .circle {
+    width: 120px;
+    height: 120px;
+  }
+  .App .topSection .circle::after {
+    width: 80px;
+    height: 80px;
+    border: 6px solid #4d4c51;
+  }
+
+  .App .topSection .inputInfo {
+    width: 120px;
+    height: 150px;
+  }
+  .App .topSection .inputInfo select {
+    font-size: 1.5rem;
+  }
+  .App .topSection .inputInfo .numberInput input {
+    font-size: 2.5rem;
+  }
+  .App .bottomSection {
+    gap: 1%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .App .bottomSection .cardContainer {
+    width: 60px;
+    height: 150px;
+    flex: 1 1 30%;
+  }
+  .App .bottomSection .cardContainer .numberInput {
+    font-size: 2rem;
+  }
+  .App .bottomSection .cardContainer .degreeInput {
+    font-size: 1.5rem;
   }
 }
