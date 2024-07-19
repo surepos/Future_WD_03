@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Future_WD_03/static/css/main.c2a743da.css",
+    "main.css": "/Future_WD_03/static/css/main.eea2ea62.css",
     "main.js": "/Future_WD_03/static/js/main.bdefc8de.js",
     "static/js/453.ca836d24.chunk.js": "/Future_WD_03/static/js/453.ca836d24.chunk.js",
     "static/media/indicator.png": "/Future_WD_03/static/media/indicator.9f6540f463cdfa4b1f38.png",
@@ -10,12 +10,12 @@
     "static/media/letter-r.png": "/Future_WD_03/static/media/letter-r.464ebea4531f6380043f.png",
     "static/media/fahrenheit.png": "/Future_WD_03/static/media/fahrenheit.1c62a8b8faa9bcf37520.png",
     "index.html": "/Future_WD_03/index.html",
-    "main.c2a743da.css.map": "/Future_WD_03/static/css/main.c2a743da.css.map",
+    "main.eea2ea62.css.map": "/Future_WD_03/static/css/main.eea2ea62.css.map",
     "main.bdefc8de.js.map": "/Future_WD_03/static/js/main.bdefc8de.js.map",
     "453.ca836d24.chunk.js.map": "/Future_WD_03/static/js/453.ca836d24.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2a743da.css",
+    "static/css/main.eea2ea62.css",
     "static/js/main.bdefc8de.js"
   ]
 }
